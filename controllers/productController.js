@@ -1,4 +1,3 @@
-const product = require("../models/Product");
 const Product = require("../models/Product");
 
 const getAllProducts = async (req, res) => {
@@ -35,7 +34,7 @@ const getproductById = async (req, res) => {
 const createproduct = async (req, res) => {
   try {
     const productData = req.body;
-    const newproduct = await product.create(productData);
+    const newproduct = await Product.create(productData);
 
     res.status(201).json({
       message: "product created",

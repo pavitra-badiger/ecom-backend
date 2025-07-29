@@ -107,8 +107,8 @@ const verifyUser = (req, res, next) => {
       authenticated: false,
     });
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    res.statas(200).json({
+    const decoded = jwt.verify(token, process.env.jwt_SECRET);
+    res.status(200).json({
       authenticated: true,
       user: decoded,
     });

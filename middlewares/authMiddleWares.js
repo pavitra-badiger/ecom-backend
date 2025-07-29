@@ -9,12 +9,14 @@ const isAuth = (req, res, next) => {
       });
     }
 
-    const data = jwt.verify(token, process.env.JWT_SECRET);
+    const data = jwt.verify(token, process.env.jwt_SECRET);
 
     req.user = data;
 
     next();
   } catch (error) {
+    console.log(error);
+
     res.status(401).json({
       message: "Invalid token. Login again",
     });
