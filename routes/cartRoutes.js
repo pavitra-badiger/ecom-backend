@@ -8,7 +8,7 @@ const {
   getCart,
 } = require("../controllers/cartController");
 
-const { isAuth } = require("../middlewares/authMiddlewares");
+const { isAuth } = require("../middlewares/authMiddleWares");
 
 const cartRoutes = express.Router();
 
